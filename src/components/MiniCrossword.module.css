@@ -1,0 +1,284 @@
+/* MiniCrossword.module.css */
+
+.crosswordContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  padding: 10px 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timer {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+}
+
+.headerButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.headerButton {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 8px;
+  color: rgba(79, 133, 229, 1);
+}
+
+.headerButton:hover {
+  opacity: 0.7;
+}
+
+.gridOutline {
+  padding: 3px;
+  background-color: #000000;
+  width: 375px;
+  height: 375px;
+}
+
+.gridContainer {
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  height: 20%;
+}
+
+.cell {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid #000;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  background-color: #ffffff;
+}
+
+.cellBlack {
+  flex: 1;
+  background-color: #000000;
+  border: 0.5px solid #000;
+}
+
+.cellSelected {
+  background-color: #fcda00 !important;
+}
+
+.cellHighlighted {
+  background-color: #a7d8ff !important;
+}
+
+.cellRevealed {
+  background-color: #ffeda3 !important;
+}
+
+.cellCorrect {
+  background-color: #dfffdf !important;
+}
+
+.clueNumber {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.cellInput {
+  font-size: 40px;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.bottomContainer {
+  width: 100%;
+}
+
+.clueBar {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  height: 61px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.clueNavButton {
+  width: 40px;
+  background-color: rgba(167, 216, 255, 1);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  color: #000000;
+}
+
+.clueNavButton:hover {
+  opacity: 0.8;
+}
+
+.clueTextContainer {
+  flex: 1;
+  background-color: rgba(167, 216, 255, 1);
+  height: 100%;
+  padding: 0 6px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.clueText {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.keyboard {
+  height: 237px;
+  background-color: rgba(220, 220, 220, 1);
+  padding: 2px;
+  width: 100%;
+}
+
+.keyboardRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin: 2.5px 0;
+}
+
+.letterTile {
+  width: 33px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 2px solid rgb(172, 175, 178);
+  cursor: pointer;
+  font-size: 22px;
+  color: #000000;
+  text-transform: capitalize;
+}
+
+.letterTile:hover {
+  opacity: 0.8;
+}
+
+.specialKey {
+  width: 47px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(186, 189, 193, 1);
+  border-radius: 5px;
+  border: none;
+  border-bottom: 2px solid rgba(123, 125, 127, 1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #000000;
+}
+
+.specialKey:hover {
+  opacity: 0.8;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .timer {
+    font-size: 16px;
+  }
+
+  .gridOutline {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cellInput {
+    font-size: 28px;
+  }
+
+  .clueNumber {
+    font-size: 10px;
+  }
+
+  .letterTile {
+    width: 28px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .specialKey {
+    width: 40px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .clueText {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gridOutline {
+    width: 250px;
+    height: 250px;
+  }
+
+  .cellInput {
+    font-size: 24px;
+  }
+
+  .letterTile {
+    width: 24px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .specialKey {
+    width: 35px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
